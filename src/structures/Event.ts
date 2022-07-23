@@ -1,4 +1,5 @@
-import type { Awaitable, Client } from 'discord.js';
+import type { Awaitable } from 'discord.js';
+import type { Client } from '../Client';
 
 class Event {
   eventName: string;

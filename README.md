@@ -12,5 +12,5 @@ A boilerplate for Typescript discord bot applications.
 5. Build the entire project using `yarn build`.
 6. Start the bot using `yarn start`.
 
-## License
+## 📚 License
 This project is licensed under the [GPL-3.0](LICENSE) license.

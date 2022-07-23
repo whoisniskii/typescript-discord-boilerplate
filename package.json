@@ -18,6 +18,9 @@
     "start": "cd dist && node Launcher.js"
   },
   "license": "GPL-3.0",
+  "engines": {
+    "node": ">=16.9.0"
+  },
   "author": "Nicolas Ribeiro <niskii@denkylabs.com>",
   "dependencies": {
     "discord.js": "14.0.3",

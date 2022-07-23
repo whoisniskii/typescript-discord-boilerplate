@@ -30,7 +30,6 @@ class CommandManager {
   }
 
   getCommand(commandName: string) {
-    console.log(this.manager);
     return this.manager.get(commandName);
   }
 

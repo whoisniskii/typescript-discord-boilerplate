@@ -1,11 +1,4 @@
-on:
-  pull_request:
-  push:
-    paths:
-      - '.github/workflows/*.yml'
-      - 'src/**/*.ts'
-      - 'tsconfig.json'
-      - 'package.json'
+on: [push, pull_request]
 
 jobs:
   eslint:

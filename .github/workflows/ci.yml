@@ -2,9 +2,6 @@ on: [push, pull_request]
 
 jobs:
   eslint:
-    if:
-      github.event_name == 'push' || github.event.pull_request.head.repo.full_name !=
-      github.repository
     name: Run ESLint
     runs-on: ubuntu-latest
     steps:
@@ -14,19 +11,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
         run: yarn install --immutable
 
       - name: Run ESLint
-        run: yarn lint
+        run: yarn lint:fix
 
   typescript:
-    if:
-      github.event_name == 'push' || github.event.pull_request.head.repo.full_name !=
-      github.repository
     name: TypeScript Transpile
     runs-on: ubuntu-latest
     steps:
@@ -36,8 +28,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
         run: yarn install --immutable

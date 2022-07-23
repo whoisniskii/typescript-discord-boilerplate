@@ -16,7 +16,7 @@ jobs:
         run: yarn install --immutable
 
       - name: Run ESLint
-        run: yarn lint:fix
+        run: yarn lint
 
   typescript:
     name: TypeScript Transpile

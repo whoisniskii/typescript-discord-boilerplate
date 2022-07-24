@@ -1,16 +1,10 @@
 import type { Awaitable } from 'discord.js';
 import type { Client } from '../Client';
 
-class Event {
+export abstract class Event <EventClient = Client> {
   eventName: string;
 
-  constructor() {
-    this.eventName = '';
-  }
-
-  execute(client: Client, ...args: unknown[]): Awaitable<any> {
+  execute(client: EventClient, ...args: unknown[]): Awaitable<any> {
     return { client, args };
   }
 }
-
-export { Event };

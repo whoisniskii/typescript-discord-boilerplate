@@ -12,9 +12,8 @@ export default class Ready extends Event {
   async execute(client: Client) {
     client.logger.info('Bot started successfully.', { tags: ['Bot'] });
 
-    client.on('error', (err): any => client.logger.error(err as unknown as any, { tags: ['Bot'] }));
-    process.on('unhandledRejection', err => client.logger.error(err as any, { tags: ['Process'] }));
-    process.on('uncaughtException', err => client.logger.error(err as any, { tags: ['Process'] }));
+    process.on('unhandledRejection', (err: Error) => client.logger.error(err.stack as string, { tags: ['Process'] }));
+    process.on('uncaughtException', (err: Error) => client.logger.error(err.stack as string, { tags: ['Process'] }));
 
     await client.commands.registerCommands();
   }

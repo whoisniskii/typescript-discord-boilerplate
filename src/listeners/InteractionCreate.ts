@@ -15,6 +15,6 @@ export default class InteractionCreate extends Event {
 
     const command = client.commands.getCommand(interaction.commandName);
 
-    command?.execute({ interaction } as CommandExecuteOptions).catch((err: any) => client.logger.error(err, { tags: ['Command'] }));
+    command?.execute({ interaction } as CommandExecuteOptions);
   }
 }

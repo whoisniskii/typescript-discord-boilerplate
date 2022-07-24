@@ -3,7 +3,7 @@ import { readdir } from 'node:fs/promises';
 import type { Command } from '../structures';
 import { ChatInputApplicationCommandData, Collection } from 'discord.js';
 
-class CommandManager {
+export class CommandManager {
   client: Client;
   manager: Collection<string, Command>;
 
@@ -19,6 +19,7 @@ class CommandManager {
 
       for await (const command of commands) {
         if (!command.endsWith('.js')) continue;
+
         const commandWithoutExtension = command.replace('.js', '');
         const { default: CommandClass }: { default: new (_client: Client) => Command } = await import(`../commands/${category}/${command}`);
         const cmd = new CommandClass(client);
@@ -42,5 +43,3 @@ class CommandManager {
     });
   }
 }
-
-export { CommandManager };

@@ -3,11 +3,11 @@ import type { Awaitable, ChatInputApplicationCommandData, ChatInputCommandIntera
 
 export type CommandExecuteOptions = { interaction: ChatInputCommandInteraction };
 
-class Command {
-  client: Client;
+export abstract class Command <CommandClient = Client> {
+  client: CommandClient;
   options: ChatInputApplicationCommandData;
 
-  constructor(client: Client, options: ChatInputApplicationCommandData) {
+  constructor(client: CommandClient, options: ChatInputApplicationCommandData) {
     this.client = client;
     this.options = options;
   }
@@ -16,5 +16,3 @@ class Command {
     return { interaction };
   }
 }
-
-export { Command };

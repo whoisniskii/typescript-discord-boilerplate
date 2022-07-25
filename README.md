@@ -35,5 +35,12 @@ Rename `.env.example` to `.env` and fill out the values.
 | **npm**             | `npm run start`  |
 | **pnpm**            | `pnpm run start` |
 
+## Available Scripts
++ `build`: Builds the application.
++ `start`: Starts the bot.
++ `lint`: Lint source files and tests.
++ `lint:fix`: Lint source files and tests and fix them.
++ `types:check`: Checks the types of the source files.
+
 ## License
 This project is licensed under the [GPL-3.0](LICENSE) license.

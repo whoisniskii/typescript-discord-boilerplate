@@ -1,17 +1,39 @@
-# 🔨 Typescript Discord Boilerplate
-A boilerplate for Typescript discord bot applications.
+# Typescript Discord Boilerplate
+<div align="center">
+    <p>
+        <a href="https://github.com/whoisniskii/typescript-discord-boilerplate/actions"><img src="https://github.com/whoisniskii/typescript-discord-boilerplate/actions/workflows/ci.yml/badge.svg"></a>
+    </p>
+</div>
 
-## ⚙ Self-hosting
-> ⚠️ Support will not be provided for self-hosted instances. Issues with self-hosted instances opened in this repository will be closed immediately.
+## Getting Started
+To start, just click the [use template link](https://github.com/whoisniskii/typescript-discord-boilerplate/generate) (or the green button).
 
-1. Create a Discord application. [Guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot).
-2. Install Node.js v16.9.0 or newer.
-3. Fork or clone this repository.
-4. Install yarn using `npm i -g yarn`.
-5. Install all dependencies using `yarn install`.
-6. Rename `.env.example` to `.env` and fill out the values.
-7. Build the entire project using `yarn build`.
-8. Start the bot using `yarn start`.
+Create a Discord application. [Guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot).
 
-## 📚 License
+Rename `.env.example` to `.env` and fill out the values.
+
+### Install all the dependencies with:
+
+| Package Manager     |  Command             |
+| ------------------- | -------------------- |
+| **Yarn**            | `yarn`               |
+| **npm**             | `npm install`        |
+| **pnpm**            | `pnpm install`       |
+
+### Transpile the code to JavaScript with:
+
+| Package Manager     |  Command               |
+| ------------------- | ---------------------- |
+| **Yarn**            | `yarn build`           |
+| **npm**             | `npm run build`        |
+| **pnpm**            | `pnpm run build`       |
+
+### Start the bot with:
+| Package Manager     | Command          |
+| ------------------- |------------------|
+| **Yarn**            | `yarn start`     |
+| **npm**             | `npm run start`  |
+| **pnpm**            | `pnpm run start` |
+
+## License
 This project is licensed under the [GPL-3.0](LICENSE) license.

@@ -19,7 +19,7 @@
     "types:check": "tsc --noEmit",
     "start": "cd dist && node Launcher.js"
   },
-  "license": "GPL-3.0",
+  "license": "MIT",
   "engines": {
     "node": ">=16.9.0"
   },

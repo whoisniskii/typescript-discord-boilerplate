@@ -12,7 +12,7 @@ export abstract class Command <CommandClient = Client> {
     this.options = options;
   }
 
-  execute({ interaction }: CommandExecuteOptions): Awaitable<any> {
+  execute({ interaction }: CommandExecuteOptions): Awaitable<void> {
     return { interaction };
   }
 }
